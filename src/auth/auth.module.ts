@@ -5,9 +5,9 @@ import { SupabaseService } from '../supabase/supabase.service';
 import { SupabaseAuthGuard } from '../supabase/supabase-auth.guard';
 
 @Module({
-  imports: [],
-  controllers: [AuthController],
-  providers: [AuthService, SupabaseAuthGuard, SupabaseService],
-  exports: [AuthService],
+	imports: [],
+	controllers: [AuthController],
+	providers: [AuthService, SupabaseAuthGuard, SupabaseService],
+	exports: [AuthService],
 })
 export class AuthModule {}

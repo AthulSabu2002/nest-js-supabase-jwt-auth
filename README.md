@@ -2,18 +2,18 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
 
-# File Vault API
+# Auth API
 
-A secure file storage and management API built with NestJS and Supabase.
+A secure authentication API built with NestJS and Supabase.
 
 ## Description
 
-File Vault API is a RESTful service that allows users to securely store, retrieve, and manage their files. The project uses NestJS as the backend framework and Supabase for authentication and file storage.
+Auth API is a RESTful service that provides robust user authentication capabilities. The project uses NestJS as the backend framework and Supabase for authentication services.
 
 ## Tech Stack
 
 - [NestJS](https://nestjs.com/) - Backend framework
-- [Supabase](https://supabase.io/) - Authentication and storage
+- [Supabase](https://supabase.io/) - Authentication
 - TypeScript - Programming language
 
 ## Prerequisites
