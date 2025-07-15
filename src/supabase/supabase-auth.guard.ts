@@ -7,6 +7,15 @@ import {
 import { SupabaseService } from '../supabase/supabase.service';
 import { Request } from 'express';
 
+interface User {
+	userId: string;
+	email: string;
+}
+
+interface RequestWithUser extends Request {
+	user: User;
+}
+
 @Injectable()
 export class SupabaseAuthGuard implements CanActivate {
 	constructor(private supabaseService: SupabaseService) {}
@@ -28,10 +37,9 @@ export class SupabaseAuthGuard implements CanActivate {
 			throw new UnauthorizedException('Invalid token');
 		}
 
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-		(request as any).user = {
+		(request as RequestWithUser).user = {
 			userId: data.user.id,
-			email: data.user.email,
+			email: data.user.email || '',
 		};
 
 		return true;
